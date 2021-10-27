@@ -1,4 +1,4 @@
-var retFixo, retMovel;
+var retFixo, retMovendo;
 var objeto1,objeto2,objeto3,objeto4;
 
 function setup() {
@@ -6,9 +6,9 @@ function setup() {
   retFixo = createSprite(200,200,50,80);
   retFixo.shapeColor = "green";
   retFixo.debug = true;
-  retMovel = createSprite(400,800,80,30);
-  retMovel.shapeColor = "green";
-  retMovel.debug = true;
+  retMovendo = createSprite(400,800,80,30);
+  retMovendo.shapeColor = "green";
+  retMovendo.debug = true;
 
   objeto1 = createSprite(100,100,50,50);
   objeto1.shapeColor = "green";
@@ -23,15 +23,15 @@ function setup() {
 function draw() {
   background(255,255,255);
 
-  retMovel.x = World.mouseX;
-  retMovel.y = World.mouseY;
+  retMovendo.x = World.mouseX;
+  retMovendo.y = World.mouseY;
 
-  if(isTouching(retMovel,objeto1)){
-    retMovel.shapeColor = "blue";
+  if(isTouching(retMovendo,objeto1)){
+    retMovendo.shapeColor = "blue";
     objeto1.shapeColor = "blue";
   }
   else{
-    retMovel.shapeColor = "green";
+    retMovendo.shapeColor = "green";
     objeto1.shapeColor = "green";
   }
   
